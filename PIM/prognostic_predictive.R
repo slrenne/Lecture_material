@@ -38,7 +38,7 @@ fit <- surv_fit(Surv(time = time_to_survival, event = event) ~ biomarker + TX, d
 # Generate and save the survival plot for prognostic biomarkers with treatment groups.
 ggsurvplot(fit, data = data[i,], xlim = c(0, 4), conf.int = TRUE, 
            legend.labs = c('BM1', 'BM1 Tx', 'BM2 no Tx', 'BM2 Tx'))
-ggsave('prognostic_TX.png', width = 7, height = 7, units = 'in', dpi = 300)
+ggsave('PIM/output/prognostic_TX.png', width = 7, height = 7, units = 'in', dpi = 300)
 
 # Subset data to patients without treatment (TX = 0).
 i <- data$TX == 0
@@ -50,7 +50,7 @@ fit <- surv_fit(Surv(time = time_to_survival, event = event) ~ biomarker + TX, d
 # Generate and save the survival plot for prognostic biomarkers without treatment.
 ggsurvplot(fit, data = data[i,], xlim = c(0, 4), conf.int = TRUE, 
            legend.labs = c('BM1', 'BM2'))
-ggsave('prognostic.png', width = 7, height = 7, units = 'in', dpi = 300)
+ggsave('PIM/output/prognostic.png', width = 7, height = 7, units = 'in', dpi = 300)
 ##############################################################################
 ##############################################################################
 
@@ -85,7 +85,7 @@ fit <- surv_fit(Surv(time = time_to_survival, event = event) ~ biomarker + TX, d
 # Generate and save the survival plot for predictive biomarkers with treatment.
 ggsurvplot(fit, data = data, xlim = c(0, 2.7), conf.int = TRUE, 
            legend.labs = c('BM1 no Tx', 'BM1 Tx', 'BM2 no Tx', 'BM2 Tx'))
-ggsave('predictive_TX.png', width = 7, height = 7, units = 'in', dpi = 300)
+ggsave('PIM/output/predictive_TX.png', width = 7, height = 7, units = 'in', dpi = 300)
 
 # Subset data to patients without treatment (TX = 0).
 i <- data$TX == 0
@@ -97,7 +97,7 @@ fit <- surv_fit(Surv(time = time_to_survival, event = event) ~ biomarker + TX, d
 # Generate and save the survival plot for predictive biomarkers without treatment.
 ggsurvplot(fit, data = data[i,], xlim = c(0, 2.7), conf.int = TRUE, 
            legend.labs = c('BM1', 'BM2'))
-ggsave('predictive.png', width = 7, height = 7, units = 'in', dpi = 300)
+ggsave('PIM/output/predictive.png', width = 7, height = 7, units = 'in', dpi = 300)
 
 # Define a combined survival model with both prognostic and predictive components.
 alpha <- -0.1  # Baseline log hazard rate.
@@ -122,7 +122,7 @@ fit <- surv_fit(Surv(time = time_to_survival, event = event) ~ biomarker + TX, d
 # Generate and save the survival plot for combined effects with treatment.
 ggsurvplot(fit, data = data, xlim = c(0, 2.7), conf.int = TRUE, 
            legend.labs = c('BM1 no Tx', 'BM1 Tx', 'BM2 no Tx', 'BM2 Tx'))
-ggsave('prog_pre_TX.png', width = 7, height = 7, units = 'in', dpi = 300)
+ggsave('PIM/output/prog_pre_TX.png', width = 7, height = 7, units = 'in', dpi = 300)
 
 # Subset data to patients without treatment (TX = 0).
 i <- data$TX == 0
@@ -134,4 +134,4 @@ fit <- surv_fit(Surv(time = time_to_survival, event = event) ~ biomarker + TX, d
 # Generate and save the survival plot for combined effects without treatment.
 ggsurvplot(fit, data = data[i,], xlim = c(0, 2.7), conf.int = TRUE, 
            legend.labs = c('BM1', 'BM2'))
-ggsave('prog_pre.png', width = 7, height = 7, units = 'in', dpi = 300)
+ggsave('PIM/output/prog_pre.png', width = 7, height = 7, units = 'in', dpi = 300)

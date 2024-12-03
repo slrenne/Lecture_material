@@ -1,0 +1,12 @@
+name: PIM_BM
+title: PIM_BM
+username: slrenne
+account: slrenne
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13508889
+bundleId: 9454630
+url: https://slrenne.shinyapps.io/PIM_BM/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
