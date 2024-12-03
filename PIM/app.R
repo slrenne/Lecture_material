@@ -3,7 +3,7 @@ library(survival)
 library(survminer)
 
 ui <- fluidPage(
-  titlePanel("Survival Curves with Prognostic and Predictive Biomarkers"),
+  titlePanel("Survival Curves with Prognostic (Px) and Predictive (Pr) Biomarkers (BM)"),
   
   sidebarLayout(
     sidebarPanel(
@@ -12,23 +12,25 @@ ui <- fluidPage(
       withMathJax(helpText("
         $$ \\lambda = \\frac{1}{\\exp(\\alpha + \\beta_{Px} \\cdot \\text{BM} + \\beta_{Pr} \\cdot \\text{Tx} \\cdot \\text{BM} + \\beta_{Tx} \\cdot \\text{Tx})} $$
       ")),
-      sliderInput("alpha", "Baseline Log Hazard (\\(\\alpha\\)):", min = -1, max = 1, value = -0.1, step = 0.1),
-      sliderInput("beta_prognostic", "Prognostic Coefficient (\\(\\beta_{px}\\)):", min = -1, max = 1, value = 0.2, step = 0.1),
-      sliderInput("beta_predictive", "Predictive Coefficient (\\(\\beta_{pr}\\)):", min = -2, max = 2, value = 1.3, step = 0.1),
-      sliderInput("beta_therapy", "Therapy Coefficient (\\(\\beta_{tx}\\)):", min = -2, max = 2, value = 1.3, step = 0.1),
+      sliderInput("alpha", "Baseline Log Hazard (\\(\\alpha\\)):", min = -1, max = 1, value = 0.2, step = 0.1),
+      sliderInput("beta_prognostic", "Prognostic Coefficient (\\(\\beta_{px}\\)):", min = -1, max = 1, value = 0.3, step = 0.1),
+      sliderInput("beta_predictive", "Predictive Coefficient (\\(\\beta_{pr}\\)):", min = -2, max = 2, value = 0, step = 0.1),
+      sliderInput("beta_therapy", "Therapy Coefficient (\\(\\beta_{tx}\\)):", min = -2, max = 2, value = 0.8, step = 0.1),
       numericInput("n", "Number of Patients:", value = 500, min = 100, max = 10000),
       actionButton("simulate", "Simulate Data")
     ),
     
-    mainPanel(
-      plotOutput("survivalPlotWithTherapy"),
-      plotOutput("survivalPlotWithoutTherapy")
+    mainPanel( 
+      plotOutput("survivalPlotWithoutTherapy"),
+      plotOutput("survivalPlotWithTherapy")
+
     )
   )
 )
 
 
 server <- function(input, output) {
+  
   simulate_data <- eventReactive(input$simulate, {
     N <- input$n
     biomarker <- sample(c(1, 5), size = N, replace = TRUE, prob = c(0.2, 0.8))
@@ -49,6 +51,7 @@ server <- function(input, output) {
     data <- simulate_data()
     max(data$time_to_survival)  # Get the maximum survival time
   })
+ 
   output$survivalPlotWithoutTherapy <- renderPlot({
     data <- simulate_data()
     data_no_therapy <- subset(data, TX == 0)  # Filter for no therapy
@@ -64,8 +67,8 @@ server <- function(input, output) {
     data <- simulate_data()
     fit <- surv_fit(Surv(time = time_to_survival, event = event) ~ biomarker + TX, data = data)
     ggsurvplot(
-      fit, conf.int = TRUE, legend.labs = c("BM1 no Tx", "BM1 Tx", "BM2 no Tx", "BM2 Tx"),
-      title = "Survival Curves: With Therapy", xlab = "Time", ylab = "Survival Probability",
+      fit, conf.int = TRUE, legend.labs = c("BM1 w/o Tx", "BM1 w/ Tx", "BM2 w/o Tx", "BM2 w/ Tx"),
+      title = "Survival Curves: With (w/) and Without (w/o) Therapy (Tx)", xlab = "Time", ylab = "Survival Probability",
       xlim = c(0, max_survival_time())  # Use the maximum survival time for xlim
     )
   })

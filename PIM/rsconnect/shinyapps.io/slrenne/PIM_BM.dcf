@@ -5,7 +5,7 @@ account: slrenne
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 13508889
-bundleId: 9454630
+bundleId: 9454805
 url: https://slrenne.shinyapps.io/PIM_BM/
 version: 1
 asMultiple: FALSE
