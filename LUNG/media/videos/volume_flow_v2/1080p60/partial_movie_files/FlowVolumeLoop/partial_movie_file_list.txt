@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/LUNG/media/videos/volume_flow_v2/1080p60/partial_movie_files/FlowVolumeLoop/3977891868_2073739980_223132457.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/LUNG/media/videos/volume_flow_v2/1080p60/partial_movie_files/FlowVolumeLoop/2852726489_3081851397_3874342768.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/LUNG/media/videos/volume_flow_v2/1080p60/partial_movie_files/FlowVolumeLoop/2852726489_2078400607_3776712479.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/LUNG/media/videos/volume_flow_v2/1080p60/partial_movie_files/FlowVolumeLoop/2852726489_212399252_2207404780.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/LUNG/media/videos/volume_flow_v2/1080p60/partial_movie_files/FlowVolumeLoop/2852726489_1517087099_2207404780.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/LUNG/media/videos/volume_flow_v2/1080p60/partial_movie_files/FlowVolumeLoop/2852726489_3485081734_4132584268.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/LUNG/media/videos/volume_flow_v2/1080p60/partial_movie_files/FlowVolumeLoop/2852726489_3737633849_4132584268.mp4'
