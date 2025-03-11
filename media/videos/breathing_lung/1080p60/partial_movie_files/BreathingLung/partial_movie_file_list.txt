@@ -1,0 +1,6 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/media/videos/breathing_lung/1080p60/partial_movie_files/BreathingLung/3977891868_2040857183_223132457.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/media/videos/breathing_lung/1080p60/partial_movie_files/BreathingLung/2852726489_1979160323_3396463465.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/media/videos/breathing_lung/1080p60/partial_movie_files/BreathingLung/2852726489_545337671_3396463465.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/media/videos/breathing_lung/1080p60/partial_movie_files/BreathingLung/2852726489_1979160323_3396463465.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/media/videos/breathing_lung/1080p60/partial_movie_files/BreathingLung/2852726489_545337671_3396463465.mp4'

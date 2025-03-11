@@ -1,0 +1,10 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/media/videos/boolean/1080p60/partial_movie_files/BooleanOperations/3977891868_1117534322_223132457.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/media/videos/boolean/1080p60/partial_movie_files/BooleanOperations/2852726489_3659616685_380395187.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/media/videos/boolean/1080p60/partial_movie_files/BooleanOperations/2852726489_2898336965_1676531892.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/media/videos/boolean/1080p60/partial_movie_files/BooleanOperations/2852726489_3822838985_2368732363.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/media/videos/boolean/1080p60/partial_movie_files/BooleanOperations/2852726489_266038004_2757160299.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/media/videos/boolean/1080p60/partial_movie_files/BooleanOperations/2852726489_92387674_1989081885.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/media/videos/boolean/1080p60/partial_movie_files/BooleanOperations/2852726489_3508749043_3818156362.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/media/videos/boolean/1080p60/partial_movie_files/BooleanOperations/2852726489_1379573011_4059942875.mp4'
+file 'file:C:/Users/srenne/GitHubRepo/Lecture_material/media/videos/boolean/1080p60/partial_movie_files/BooleanOperations/2852726489_22140928_3431132081.mp4'
