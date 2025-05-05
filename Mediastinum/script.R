@@ -40,6 +40,7 @@ ggsave('Mediastinum/output/total_facet.png',
        dpi = 300)
 
 tot <- sum(db$total)
+
 db %>% gather('Prevascular', 'Visceral', 'Para.vertebral',
               key = 'compartment', 
               value = 'cases') %>% 
@@ -47,9 +48,8 @@ db %>% gather('Prevascular', 'Visceral', 'Para.vertebral',
   arrange(desc('cases')) %>% head(10) %>%
   ggplot(mapping = aes(
     x = reorder(diagnosis, cases),
-    y = cases/tot, 
-    fill = 'magenta')) + 
-  geom_col() +
+    y = cases/tot)) + 
+  geom_col(fill = 'magenta') +
   coord_flip()+ 
   labs( title = 'Prevascular',
         x = 'Histotype', 
@@ -61,7 +61,8 @@ db %>% gather('Prevascular', 'Visceral', 'Para.vertebral',
 ggsave('Mediastinum/output/topPrevascular.png', 
        width = 5,
        height = 9,
-       dpi = 300)
+       dpi = 300,
+       scale = .7)
 
 db %>% gather('Prevascular', 'Visceral', 'Para.vertebral',
               key = 'compartment', 
@@ -70,9 +71,8 @@ db %>% gather('Prevascular', 'Visceral', 'Para.vertebral',
   arrange(desc('cases')) %>% head(10) %>%
   ggplot(mapping = aes(
     x = reorder(diagnosis, cases),
-    y = cases/tot, 
-    fill = 'dodgerblue')) + 
-  geom_col() +
+    y = cases/tot)) + 
+  geom_col(fill = 'dodgerblue') +
   coord_flip()+ 
   labs( title = 'Visceral',
         x = 'Histotype', 
@@ -84,7 +84,8 @@ db %>% gather('Prevascular', 'Visceral', 'Para.vertebral',
 ggsave('Mediastinum/output/topVisceral.png', 
        width = 5,
        height = 9,
-       dpi = 300)
+       dpi = 300,
+       scale = .7)
 
 db %>% gather('Prevascular', 'Visceral', 'Para.vertebral',
               key = 'compartment', 
@@ -93,9 +94,8 @@ db %>% gather('Prevascular', 'Visceral', 'Para.vertebral',
   arrange(desc('cases')) %>% head(10) %>%
   ggplot(mapping = aes(
     x = reorder(diagnosis, cases),
-    y = cases/tot, 
-    fill = 'yellow')) + 
-  geom_col() +
+    y = cases/tot)) + 
+  geom_col( fill = 'yellow') +
   coord_flip()+ 
   labs( title = 'Paravertebral',
         x = 'Histotype', 
@@ -107,4 +107,6 @@ db %>% gather('Prevascular', 'Visceral', 'Para.vertebral',
 ggsave('Mediastinum/output/topParavertebral.png', 
        width = 5,
        height = 9,
-       dpi = 300)
+       dpi = 300,
+       scale = .7)
+
